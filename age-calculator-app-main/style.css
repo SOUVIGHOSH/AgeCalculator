@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background-color: hsl(0, 0%, 86%);
+  font-size: 32px;
+}
+
+main {
+  min-height: 50vh;
+  background-color: white;
+  border-radius: 20px 20px 60px 20px;
+  width: 70%;
+  min-width: 300px;
+  margin: 10vh auto;
+}
+
+.form-container {
+  padding: 5%;
+  vertical-align: middle;
+}
+.result-container {
+  padding: 0 5% 5% 5%;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.result-container div span:first-of-type {
+  color: hsl(259, 100%, 65%);
+  margin-right: 5px;
+}
+
+.block {
+  display: inline-block;
+  width: 20vw;
+  max-width: 150px;
+  height: fit-content;
+}
+.block label {
+  display: block;
+  font-size: 0.3em;
+  color: hsl(0, 1%, 44%);
+}
+.block input {
+  display: block;
+  height: 40px;
+  width: 80%;
+  margin: 0;
+  font-weight: 700;
+  padding: 10%;
+}
+.block input::-webkit-outer-spin-button,
+.block input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.block input:focus-visible {
+  outline: hsl(259, 100%, 65%) auto 1px;
+}
+
+.submit {
+  padding-top: 10px;
+  position: relative;
+  vertical-align: middle;
+  margin-top: 10px;
+  height: 10vh;
+  max-width: 600px;
+}
+
+.underline {
+  display: inline-block;
+  width: 100%;
+  border-bottom: 2px solid hsl(0, 1%, 44%);
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  z-index: 0;
+}
+
+.submit-btn {
+  display: inline-block;
+  position: absolute;
+  top: 0%;
+  left: calc(50% - 28px);
+  z-index: 1;
+  height: 55px;
+  width: 55px;
+  border-radius: 100%;
+  background-color: hsl(259, 100%, 65%);
+  cursor: pointer;
+}
+
+@media (min-width: 376px) {
+  .submit-btn {
+    left: calc(100% - 40px);
+  }
+}
+
+.error label {
+  color: hsl(0, 100%, 67%) !important;
+}
+.error input {
+  outline: hsl(0, 100%, 67%) auto 0.5px;
+}
+.error-msg {
+  height: 15px;
+  color: hsl(0, 100%, 67%);
+  font-size: 00.3em;
+}
+
+.whole-form-error::after {
+  content: "Must be a valid date";
+  color: hsl(0, 100%, 67%);
+  font-size: 00.3em;
+}

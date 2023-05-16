@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="age.js"></script>
+  
+  <title>Age calculator app</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="form-container">
+      <form id="form" onsubmit="submitHandler(event)">
+        <section class="block">
+          <label for="date-input">DAY</label>
+          <input type="number" name="date" id="date-input" placeholder="DD">
+          <div class="error-msg" id="date-msg"></div>
+        </section>
+        <section class="block">
+          <label for="month-input">MONTH</label>
+          <input type="number" name="month" id="month-input" placeholder="MM">
+          <div class="error-msg" id="month-msg"></div>
+        </section>
+        <section class="block">
+          <label for="year-input">YEAR</label>
+          <input type="number" name="year" id="year-input" placeholder="YYYY">
+          <div class="error-msg" id="year-msg"></div>
+        </section>
+        <div class="submit">
+          <div class="underline"></div>
+          <button type="submit" class="submit-btn">
+            <img src="/assets/images/icon-arrow.svg" alt="btn" width="40"/>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="result-container">
+      <div><i><span id="years">--</span><span>Years</span></i></div>
+      <div><i><span id="months">--</span><span>Months</span></i></div>
+      <div><i><span id="days">--</span><span>Days</span></i></div>
+    </div>
+  
+  </main>
+
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Souvik Ghosh</a>.
+  </div>
+</body>
+</html>
